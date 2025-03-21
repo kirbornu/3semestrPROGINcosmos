@@ -1,0 +1,32 @@
+name: Build Java Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Клонируем репозиторий
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Шаг 2: Устанавливаем JDK (например, версию 17)
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # Шаг 3: Компилируем проект
+      - name: Compile project
+        run: |
+          mkdir -p out/production/cosmos
+          javac src/*.java -d out/production/cosmos
+
+      # Шаг 4: Проверяем успешность сборки
+      - name: Check build success
+        run: echo "Build completed successfully!"
