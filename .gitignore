@@ -1,7 +1,21 @@
+# Локальные файлы ОС
+.DS_Store
+Thumbs.db
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Чувствительные данные
+.env
+secrets.*
+
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.idea/
+*.iml
 
 ### Eclipse ###
 .apt_generated
