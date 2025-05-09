@@ -1,0 +1,114 @@
+\doxysection{Класс Game\+Core}
+\hypertarget{class_game_core}{}\label{class_game_core}\index{GameCore@{GameCore}}
+
+
+Этот класс является ядром симуляции и отвечает за управление звёздами и их взаимодействием, а также расчётами  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_core_a62fbf6b318a93a96074395f44ae2c660}\label{class_game_core_a62fbf6b318a93a96074395f44ae2c660} 
+{\bfseries Game\+Core} (\mbox{\hyperlink{class_space_field}{Space\+Field}} sf, \mbox{\hyperlink{class_buttons_field}{Buttons\+Field}} bf)
+\item 
+\Hypertarget{class_game_core_adf40167c9f5d72bde664533259073b5a}\label{class_game_core_adf40167c9f5d72bde664533259073b5a} 
+void {\bfseries create\+Star} ()
+\begin{DoxyCompactList}\small\item\em Переключает режим создания звезды. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_core_a04e7ca49ca66ba6864520b6dd21c985a}{create\+Star}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Создаёт новую звезду в указанных координатах. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_ade3f0407d4d07ab1e40c0bf0239479ca}\label{class_game_core_ade3f0407d4d07ab1e40c0bf0239479ca} 
+void {\bfseries stars\+Collisions\+Update} ()
+\begin{DoxyCompactList}\small\item\em Обновляет состояние звёзд после столкновений и создаёт осколки стокнувшихся звёзд. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_aee46fda70279639cfed2b25aa163cf43}\label{class_game_core_aee46fda70279639cfed2b25aa163cf43} 
+void {\bfseries zoom\+In} ()
+\begin{DoxyCompactList}\small\item\em Увеличивает масштаб симуляции. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_abf1d608f702edef9c28fa0934548251f}\label{class_game_core_abf1d608f702edef9c28fa0934548251f} 
+void {\bfseries zoom\+Out} ()
+\begin{DoxyCompactList}\small\item\em Уменьшает масштаб симуляции. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_aeba196cad62f6f94100e5ac8fd5f08a4}\label{class_game_core_aeba196cad62f6f94100e5ac8fd5f08a4} 
+void {\bfseries shift\+Left} ()
+\begin{DoxyCompactList}\small\item\em Сдвигает область симуляции влево. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_a8a587d378c86e98d39cabdf31bf9e8c7}\label{class_game_core_a8a587d378c86e98d39cabdf31bf9e8c7} 
+void {\bfseries shift\+Right} ()
+\begin{DoxyCompactList}\small\item\em Сдвигает область симуляции вправо. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_a895d41564293ab8f80410c92e03508ab}\label{class_game_core_a895d41564293ab8f80410c92e03508ab} 
+void {\bfseries shift\+Up} ()
+\begin{DoxyCompactList}\small\item\em Сдвигает область симуляции вверх. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_a0eccda7359dee712f41fbef4b548be71}\label{class_game_core_a0eccda7359dee712f41fbef4b548be71} 
+void {\bfseries shift\+Down} ()
+\begin{DoxyCompactList}\small\item\em Сдвигает область симуляции вниз. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_aff1e7b0775a10f4ad02c14015b2bc77e}\label{class_game_core_aff1e7b0775a10f4ad02c14015b2bc77e} 
+void {\bfseries reset\+Zoom\+And\+Shift} ()
+\begin{DoxyCompactList}\small\item\em Сбрасывает масштаб и сдвиг до начальных значений. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_a114431a31771f2e4756ee51e93ce3f50}\label{class_game_core_a114431a31771f2e4756ee51e93ce3f50} 
+void {\bfseries timer\+Start} ()
+\begin{DoxyCompactList}\small\item\em Запускает таймер симуляции. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_core_a3e062bf222cf339bf9c2d6ad5fd65851}\label{class_game_core_a3e062bf222cf339bf9c2d6ad5fd65851} 
+void {\bfseries timer\+Stop} ()
+\begin{DoxyCompactList}\small\item\em Останавливает таймер симуляции. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_core_a3363d8f0856b6c20734a42b5be8ccdbb}\label{class_game_core_a3363d8f0856b6c20734a42b5be8ccdbb} 
+boolean {\bfseries is\+Game\+Stop} = false
+\item 
+\Hypertarget{class_game_core_a52239517dae996fed6dd9ae8101cfc53}\label{class_game_core_a52239517dae996fed6dd9ae8101cfc53} 
+Hash\+Set$<$ \mbox{\hyperlink{class_star}{Star}} $>$ {\bfseries stars} = new Hash\+Set$<$\mbox{\hyperlink{class_star}{Star}}$>$()
+\item 
+\Hypertarget{class_game_core_a12d3412a47062902d798758d9b6d869b}\label{class_game_core_a12d3412a47062902d798758d9b6d869b} 
+boolean {\bfseries waiting\+For\+Input} = false
+\item 
+\Hypertarget{class_game_core_ad1248856015b71b09e6b1b5889be58d2}\label{class_game_core_ad1248856015b71b09e6b1b5889be58d2} 
+boolean {\bfseries multiple\+Mode} = false
+\item 
+\Hypertarget{class_game_core_aab184d8fed8f870dcb3616c866719258}\label{class_game_core_aab184d8fed8f870dcb3616c866719258} 
+double {\bfseries scale} = 1.\+0
+\item 
+\Hypertarget{class_game_core_a1817eaaf1c66c60c8b5ee21ef6a07973}\label{class_game_core_a1817eaaf1c66c60c8b5ee21ef6a07973} 
+double {\bfseries shiftX} = 0.\+0
+\item 
+\Hypertarget{class_game_core_aed14a21e29b5133152c073aaee8bb355}\label{class_game_core_aed14a21e29b5133152c073aaee8bb355} 
+double {\bfseries shiftY} = 0.\+0
+\item 
+\Hypertarget{class_game_core_aa56e3d5f74cda40f149f93e239be5bf2}\label{class_game_core_aa56e3d5f74cda40f149f93e239be5bf2} 
+int {\bfseries timer\+Delay} = 10
+\item 
+\Hypertarget{class_game_core_a53161df94948226d5637f08fbb1032e7}\label{class_game_core_a53161df94948226d5637f08fbb1032e7} 
+\mbox{\hyperlink{class_star}{Star}} {\bfseries selected\+Star}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Этот класс является ядром симуляции и отвечает за управление звёздами и их взаимодействием, а также расчётами 
+
+\begin{DoxyAuthor}{Автор}
+kirbornu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_game_core_a04e7ca49ca66ba6864520b6dd21c985a}\index{GameCore@{GameCore}!createStar@{createStar}}
+\index{createStar@{createStar}!GameCore@{GameCore}}
+\doxysubsubsection{\texorpdfstring{createStar()}{createStar()}}
+{\footnotesize\ttfamily \label{class_game_core_a04e7ca49ca66ba6864520b6dd21c985a} 
+void Game\+Core.\+create\+Star (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт новую звезду в указанных координатах. 
+
+Цвет звезды -\/ случайный, а радиус и масса -\/ заранее заданы 
+\begin{DoxyParams}{Аргументы}
+{\em x} & Координата X. \\
+\hline
+{\em y} & Координата Y. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/Game\+Core.\+java\end{DoxyCompactItemize}

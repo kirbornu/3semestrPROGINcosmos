@@ -1,0 +1,19 @@
+DOXYFILE_ENCODING      = UTF-8
+
+PROJECT_NAME           = "Симуляция небесной механики - cosmos"
+
+PROJECT_LOGO           = cosmos_icon.png
+
+PROJECT_ICON           = cosmos_icon.png
+
+INPUT = src
+
+OUTPUT_DIRECTORY       = docs
+
+CREATE_SUBDIRS         = NO
+
+OUTPUT_LANGUAGE        = Russian
+
+JAVADOC_AUTOBRIEF      = YES
+
+OPTIMIZE_OUTPUT_JAVA   = YES

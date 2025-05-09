@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Симуляция небесной механики - cosmos: Класс SpaceField</title>
+<link rel="icon" href="cosmos_icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="cosmos_icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Симуляция небесной механики - cosmos
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_space_field.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="class_space_field-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SpaceField</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Этот класс отвечает за отрисовку объектов симуляции  
+ <a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:SpaceField:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_space_field.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a89bfafc3208076cc0f4f16a7a91e128f" id="r_a89bfafc3208076cc0f4f16a7a91e128f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89bfafc3208076cc0f4f16a7a91e128f">drawCoordinateGrid</a> (Graphics2D g2, double scale, double shiftX, double shiftY)</td></tr>
+<tr class="memdesc:a89bfafc3208076cc0f4f16a7a91e128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовка координатной сетки для ориентирования в пространстве Смещение камеры учитывается в отрисовке  <br /></td></tr>
+<tr class="separator:a89bfafc3208076cc0f4f16a7a91e128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2d2216f006cd95e437392adea5dcb3" id="r_aaa2d2216f006cd95e437392adea5dcb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa2d2216f006cd95e437392adea5dcb3">drawStars</a> (Graphics2D g2, double scale, double shiftX, double shiftY)</td></tr>
+<tr class="memdesc:aaa2d2216f006cd95e437392adea5dcb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовка каждый звезды Цикл проходится по массиву gameCore.stars.  <br /></td></tr>
+<tr class="separator:aaa2d2216f006cd95e437392adea5dcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0a0f2030edd3356031189e0f2db426" id="r_a5c0a0f2030edd3356031189e0f2db426"><td class="memItemLeft" align="right" valign="top"><a id="a5c0a0f2030edd3356031189e0f2db426" name="a5c0a0f2030edd3356031189e0f2db426"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setGameCore</b> (<a class="el" href="class_game_core.html">GameCore</a> gameCore)</td></tr>
+<tr class="separator:a5c0a0f2030edd3356031189e0f2db426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9259828cf3b57f7b912b60c82ce1b265" id="r_a9259828cf3b57f7b912b60c82ce1b265"><td class="memItemLeft" align="right" valign="top"><a id="a9259828cf3b57f7b912b60c82ce1b265" name="a9259828cf3b57f7b912b60c82ce1b265"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setButtonsField</b> (<a class="el" href="class_buttons_field.html">ButtonsField</a> buttonsField)</td></tr>
+<tr class="separator:a9259828cf3b57f7b912b60c82ce1b265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ef4f164c8d0ba722423e96a73888ea" id="r_a71ef4f164c8d0ba722423e96a73888ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71ef4f164c8d0ba722423e96a73888ea">actionPerformed</a> (ActionEvent e)</td></tr>
+<tr class="memdesc:a71ef4f164c8d0ba722423e96a73888ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Это обработчик событий физики Занимается отслеживанием взаимодействия каждой пары звезд Этим взаимодействием может быть либо притяжение на расстоянии, либо столкновение  <br /></td></tr>
+<tr class="separator:a71ef4f164c8d0ba722423e96a73888ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a24183e1945f41ffe8d19c1ed17f7e" id="r_a62a24183e1945f41ffe8d19c1ed17f7e"><td class="memItemLeft" align="right" valign="top"><a id="a62a24183e1945f41ffe8d19c1ed17f7e" name="a62a24183e1945f41ffe8d19c1ed17f7e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseClicked</b> (MouseEvent e)</td></tr>
+<tr class="separator:a62a24183e1945f41ffe8d19c1ed17f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69aa940aee50758b44af6b029cc011f6" id="r_a69aa940aee50758b44af6b029cc011f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69aa940aee50758b44af6b029cc011f6">mousePressed</a> (MouseEvent e)</td></tr>
+<tr class="memdesc:a69aa940aee50758b44af6b029cc011f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для обработки нажатий мыши Отслеживает, попало ли нажатие по звезде  <br /></td></tr>
+<tr class="separator:a69aa940aee50758b44af6b029cc011f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4e80435926e1804ed6f8b39564ea3f" id="r_aae4e80435926e1804ed6f8b39564ea3f"><td class="memItemLeft" align="right" valign="top"><a id="aae4e80435926e1804ed6f8b39564ea3f" name="aae4e80435926e1804ed6f8b39564ea3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseReleased</b> (MouseEvent e)</td></tr>
+<tr class="separator:aae4e80435926e1804ed6f8b39564ea3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6baa2750dfcf1faee6e646f3f19a7fdb" id="r_a6baa2750dfcf1faee6e646f3f19a7fdb"><td class="memItemLeft" align="right" valign="top"><a id="a6baa2750dfcf1faee6e646f3f19a7fdb" name="a6baa2750dfcf1faee6e646f3f19a7fdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseEntered</b> (MouseEvent e)</td></tr>
+<tr class="separator:a6baa2750dfcf1faee6e646f3f19a7fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ef80fb8ad121aae8413a895f3a5155" id="r_ad6ef80fb8ad121aae8413a895f3a5155"><td class="memItemLeft" align="right" valign="top"><a id="ad6ef80fb8ad121aae8413a895f3a5155" name="ad6ef80fb8ad121aae8413a895f3a5155"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseExited</b> (MouseEvent e)</td></tr>
+<tr class="separator:ad6ef80fb8ad121aae8413a895f3a5155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b33844d142f5506c21267d5114fc34" id="r_a28b33844d142f5506c21267d5114fc34"><td class="memItemLeft" align="right" valign="top"><a id="a28b33844d142f5506c21267d5114fc34" name="a28b33844d142f5506c21267d5114fc34"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>keyTyped</b> (KeyEvent e)</td></tr>
+<tr class="separator:a28b33844d142f5506c21267d5114fc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa65bd4fc738e65761a34576a1575f83" id="r_aaa65bd4fc738e65761a34576a1575f83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa65bd4fc738e65761a34576a1575f83">keyPressed</a> (KeyEvent e)</td></tr>
+<tr class="memdesc:aaa65bd4fc738e65761a34576a1575f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для отслеживания нажатий клавиш клавиатуры  <br /></td></tr>
+<tr class="separator:aaa65bd4fc738e65761a34576a1575f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4695bb561a304d866e13a697c91ec730" id="r_a4695bb561a304d866e13a697c91ec730"><td class="memItemLeft" align="right" valign="top"><a id="a4695bb561a304d866e13a697c91ec730" name="a4695bb561a304d866e13a697c91ec730"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>keyReleased</b> (KeyEvent e)</td></tr>
+<tr class="separator:a4695bb561a304d866e13a697c91ec730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a9808d719cc2809ac8cc0b59381e3b65b" id="r_a9808d719cc2809ac8cc0b59381e3b65b"><td class="memItemLeft" align="right" valign="top"><a id="a9808d719cc2809ac8cc0b59381e3b65b" name="a9808d719cc2809ac8cc0b59381e3b65b"></a>
+static final double&#160;</td><td class="memItemRight" valign="bottom"><b>FIELD_WIDTH</b> = (double) (Toolkit.getDefaultToolkit().getScreenSize().width * 3) / 4</td></tr>
+<tr class="memdesc:a9808d719cc2809ac8cc0b59381e3b65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ширина окна отрисовки <br /></td></tr>
+<tr class="separator:a9808d719cc2809ac8cc0b59381e3b65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6071622240cff84edb3b85620565ce" id="r_add6071622240cff84edb3b85620565ce"><td class="memItemLeft" align="right" valign="top"><a id="add6071622240cff84edb3b85620565ce" name="add6071622240cff84edb3b85620565ce"></a>
+static final double&#160;</td><td class="memItemRight" valign="bottom"><b>FIELD_HEIGHT</b> = (double) Toolkit.getDefaultToolkit().getScreenSize().height</td></tr>
+<tr class="memdesc:add6071622240cff84edb3b85620565ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Высота окна отрисовки <br /></td></tr>
+<tr class="separator:add6071622240cff84edb3b85620565ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:ab0d3c336ab268259cce61eda6c889c36" id="r_ab0d3c336ab268259cce61eda6c889c36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0d3c336ab268259cce61eda6c889c36">paintComponent</a> (Graphics g)</td></tr>
+<tr class="memdesc:ab0d3c336ab268259cce61eda6c889c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расширение метода <a class="el" href="#ab0d3c336ab268259cce61eda6c889c36" title="Расширение метода paintComponent() из java.awt Вызывается каждый кадр симуляции и рисует всё">paintComponent()</a> из java.awt Вызывается каждый кадр симуляции и рисует всё  <br /></td></tr>
+<tr class="separator:ab0d3c336ab268259cce61eda6c889c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Этот класс отвечает за отрисовку объектов симуляции </p>
+<dl class="section author"><dt>Автор</dt><dd>kirbornu </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.1 </dd></dl>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a71ef4f164c8d0ba722423e96a73888ea" name="a71ef4f164c8d0ba722423e96a73888ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ef4f164c8d0ba722423e96a73888ea">&#9670;&#160;</a></span>actionPerformed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpaceField.actionPerformed </td>
+          <td>(</td>
+          <td class="paramtype">ActionEvent</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Это обработчик событий физики Занимается отслеживанием взаимодействия каждой пары звезд Этим взаимодействием может быть либо притяжение на расстоянии, либо столкновение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>the event to be processed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a89bfafc3208076cc0f4f16a7a91e128f" name="a89bfafc3208076cc0f4f16a7a91e128f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89bfafc3208076cc0f4f16a7a91e128f">&#9670;&#160;</a></span>drawCoordinateGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpaceField.drawCoordinateGrid </td>
+          <td>(</td>
+          <td class="paramtype">Graphics2D</td>          <td class="paramname"><span class="paramname"><em>g2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>shiftX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>shiftY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отрисовка координатной сетки для ориентирования в пространстве Смещение камеры учитывается в отрисовке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g2</td><td>Класс-отрисовщик из библиотеки </td></tr>
+    <tr><td class="paramname">scale</td><td>Масштаб отображения (зум камеры) </td></tr>
+    <tr><td class="paramname">shiftX</td><td>Смещение камеры по оси X </td></tr>
+    <tr><td class="paramname">shiftY</td><td>Смещение камеры по оси Y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa2d2216f006cd95e437392adea5dcb3" name="aaa2d2216f006cd95e437392adea5dcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2d2216f006cd95e437392adea5dcb3">&#9670;&#160;</a></span>drawStars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpaceField.drawStars </td>
+          <td>(</td>
+          <td class="paramtype">Graphics2D</td>          <td class="paramname"><span class="paramname"><em>g2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>shiftX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>shiftY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отрисовка каждый звезды Цикл проходится по массиву gameCore.stars. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g2</td><td>Класс-отрисовщик из библиотеки </td></tr>
+    <tr><td class="paramname">scale</td><td>Масштаб отображения (зум кам </td></tr>
+    <tr><td class="paramname">shiftX</td><td>Смещение камеры по оси X </td></tr>
+    <tr><td class="paramname">shiftY</td><td>Смещение камеры по оси Y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa65bd4fc738e65761a34576a1575f83" name="aaa65bd4fc738e65761a34576a1575f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa65bd4fc738e65761a34576a1575f83">&#9670;&#160;</a></span>keyPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpaceField.keyPressed </td>
+          <td>(</td>
+          <td class="paramtype">KeyEvent</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод для отслеживания нажатий клавиш клавиатуры </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>the event to be processed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a69aa940aee50758b44af6b029cc011f6" name="a69aa940aee50758b44af6b029cc011f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69aa940aee50758b44af6b029cc011f6">&#9670;&#160;</a></span>mousePressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpaceField.mousePressed </td>
+          <td>(</td>
+          <td class="paramtype">MouseEvent</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод для обработки нажатий мыши Отслеживает, попало ли нажатие по звезде </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>the event to be processed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab0d3c336ab268259cce61eda6c889c36" name="ab0d3c336ab268259cce61eda6c889c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d3c336ab268259cce61eda6c889c36">&#9670;&#160;</a></span>paintComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpaceField.paintComponent </td>
+          <td>(</td>
+          <td class="paramtype">Graphics</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Расширение метода <a class="el" href="#ab0d3c336ab268259cce61eda6c889c36" title="Расширение метода paintComponent() из java.awt Вызывается каждый кадр симуляции и рисует всё">paintComponent()</a> из java.awt Вызывается каждый кадр симуляции и рисует всё </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>the <code>Graphics</code> object to protect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/<b>SpaceField.java</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_space_field.html">SpaceField</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

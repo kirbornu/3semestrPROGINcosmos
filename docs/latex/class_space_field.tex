@@ -1,0 +1,185 @@
+\doxysection{Класс Space\+Field}
+\hypertarget{class_space_field}{}\label{class_space_field}\index{SpaceField@{SpaceField}}
+
+
+Этот класс отвечает за отрисовку объектов симуляции  
+
+
+Граф наследования\+:Space\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_space_field}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_space_field_a89bfafc3208076cc0f4f16a7a91e128f}{draw\+Coordinate\+Grid}} (Graphics2D g2, double scale, double shiftX, double shiftY)
+\begin{DoxyCompactList}\small\item\em Отрисовка координатной сетки для ориентирования в пространстве Смещение камеры учитывается в отрисовке \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_space_field_aaa2d2216f006cd95e437392adea5dcb3}{draw\+Stars}} (Graphics2D g2, double scale, double shiftX, double shiftY)
+\begin{DoxyCompactList}\small\item\em Отрисовка каждый звезды Цикл проходится по массиву game\+Core.\+stars. \end{DoxyCompactList}\item 
+\Hypertarget{class_space_field_a5c0a0f2030edd3356031189e0f2db426}\label{class_space_field_a5c0a0f2030edd3356031189e0f2db426} 
+void {\bfseries set\+Game\+Core} (\mbox{\hyperlink{class_game_core}{Game\+Core}} game\+Core)
+\item 
+\Hypertarget{class_space_field_a9259828cf3b57f7b912b60c82ce1b265}\label{class_space_field_a9259828cf3b57f7b912b60c82ce1b265} 
+void {\bfseries set\+Buttons\+Field} (\mbox{\hyperlink{class_buttons_field}{Buttons\+Field}} buttons\+Field)
+\item 
+void \mbox{\hyperlink{class_space_field_a71ef4f164c8d0ba722423e96a73888ea}{action\+Performed}} (Action\+Event e)
+\begin{DoxyCompactList}\small\item\em Это обработчик событий физики Занимается отслеживанием взаимодействия каждой пары звезд Этим взаимодействием может быть либо притяжение на расстоянии, либо столкновение \end{DoxyCompactList}\item 
+\Hypertarget{class_space_field_a62a24183e1945f41ffe8d19c1ed17f7e}\label{class_space_field_a62a24183e1945f41ffe8d19c1ed17f7e} 
+void {\bfseries mouse\+Clicked} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{class_space_field_a69aa940aee50758b44af6b029cc011f6}{mouse\+Pressed}} (Mouse\+Event e)
+\begin{DoxyCompactList}\small\item\em Метод для обработки нажатий мыши Отслеживает, попало ли нажатие по звезде \end{DoxyCompactList}\item 
+\Hypertarget{class_space_field_aae4e80435926e1804ed6f8b39564ea3f}\label{class_space_field_aae4e80435926e1804ed6f8b39564ea3f} 
+void {\bfseries mouse\+Released} (Mouse\+Event e)
+\item 
+\Hypertarget{class_space_field_a6baa2750dfcf1faee6e646f3f19a7fdb}\label{class_space_field_a6baa2750dfcf1faee6e646f3f19a7fdb} 
+void {\bfseries mouse\+Entered} (Mouse\+Event e)
+\item 
+\Hypertarget{class_space_field_ad6ef80fb8ad121aae8413a895f3a5155}\label{class_space_field_ad6ef80fb8ad121aae8413a895f3a5155} 
+void {\bfseries mouse\+Exited} (Mouse\+Event e)
+\item 
+\Hypertarget{class_space_field_a28b33844d142f5506c21267d5114fc34}\label{class_space_field_a28b33844d142f5506c21267d5114fc34} 
+void {\bfseries key\+Typed} (Key\+Event e)
+\item 
+void \mbox{\hyperlink{class_space_field_aaa65bd4fc738e65761a34576a1575f83}{key\+Pressed}} (Key\+Event e)
+\begin{DoxyCompactList}\small\item\em Метод для отслеживания нажатий клавиш клавиатуры \end{DoxyCompactList}\item 
+\Hypertarget{class_space_field_a4695bb561a304d866e13a697c91ec730}\label{class_space_field_a4695bb561a304d866e13a697c91ec730} 
+void {\bfseries key\+Released} (Key\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_space_field_a9808d719cc2809ac8cc0b59381e3b65b}\label{class_space_field_a9808d719cc2809ac8cc0b59381e3b65b} 
+static final double {\bfseries FIELD\+\_\+\+WIDTH} = (double) (Toolkit.\+get\+Default\+Toolkit().get\+Screen\+Size().width \texorpdfstring{$\ast$}{*} 3) / 4
+\begin{DoxyCompactList}\small\item\em Ширина окна отрисовки \end{DoxyCompactList}\item 
+\Hypertarget{class_space_field_add6071622240cff84edb3b85620565ce}\label{class_space_field_add6071622240cff84edb3b85620565ce} 
+static final double {\bfseries FIELD\+\_\+\+HEIGHT} = (double) Toolkit.\+get\+Default\+Toolkit().get\+Screen\+Size().height
+\begin{DoxyCompactList}\small\item\em Высота окна отрисовки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_space_field_ab0d3c336ab268259cce61eda6c889c36}{paint\+Component}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Расширение метода \doxylink{class_space_field_ab0d3c336ab268259cce61eda6c889c36}{paint\+Component()} из java.\+awt Вызывается каждый кадр симуляции и рисует всё \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Этот класс отвечает за отрисовку объектов симуляции 
+
+\begin{DoxyAuthor}{Автор}
+kirbornu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_space_field_a71ef4f164c8d0ba722423e96a73888ea}\index{SpaceField@{SpaceField}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!SpaceField@{SpaceField}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_space_field_a71ef4f164c8d0ba722423e96a73888ea} 
+void Space\+Field.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Это обработчик событий физики Занимается отслеживанием взаимодействия каждой пары звезд Этим взаимодействием может быть либо притяжение на расстоянии, либо столкновение 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em e} & the event to be processed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_space_field_a89bfafc3208076cc0f4f16a7a91e128f}\index{SpaceField@{SpaceField}!drawCoordinateGrid@{drawCoordinateGrid}}
+\index{drawCoordinateGrid@{drawCoordinateGrid}!SpaceField@{SpaceField}}
+\doxysubsubsection{\texorpdfstring{drawCoordinateGrid()}{drawCoordinateGrid()}}
+{\footnotesize\ttfamily \label{class_space_field_a89bfafc3208076cc0f4f16a7a91e128f} 
+void Space\+Field.\+draw\+Coordinate\+Grid (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2}{, }\item[{double}]{scale}{, }\item[{double}]{shiftX}{, }\item[{double}]{shiftY}{}\end{DoxyParamCaption})}
+
+
+
+Отрисовка координатной сетки для ориентирования в пространстве Смещение камеры учитывается в отрисовке 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g2} & Класс-\/отрисовщик из библиотеки \\
+\hline
+{\em scale} & Масштаб отображения (зум камеры) \\
+\hline
+{\em shiftX} & Смещение камеры по оси X \\
+\hline
+{\em shiftY} & Смещение камеры по оси Y \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_space_field_aaa2d2216f006cd95e437392adea5dcb3}\index{SpaceField@{SpaceField}!drawStars@{drawStars}}
+\index{drawStars@{drawStars}!SpaceField@{SpaceField}}
+\doxysubsubsection{\texorpdfstring{drawStars()}{drawStars()}}
+{\footnotesize\ttfamily \label{class_space_field_aaa2d2216f006cd95e437392adea5dcb3} 
+void Space\+Field.\+draw\+Stars (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2}{, }\item[{double}]{scale}{, }\item[{double}]{shiftX}{, }\item[{double}]{shiftY}{}\end{DoxyParamCaption})}
+
+
+
+Отрисовка каждый звезды Цикл проходится по массиву game\+Core.\+stars. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g2} & Класс-\/отрисовщик из библиотеки \\
+\hline
+{\em scale} & Масштаб отображения (зум кам \\
+\hline
+{\em shiftX} & Смещение камеры по оси X \\
+\hline
+{\em shiftY} & Смещение камеры по оси Y \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_space_field_aaa65bd4fc738e65761a34576a1575f83}\index{SpaceField@{SpaceField}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!SpaceField@{SpaceField}}
+\doxysubsubsection{\texorpdfstring{keyPressed()}{keyPressed()}}
+{\footnotesize\ttfamily \label{class_space_field_aaa65bd4fc738e65761a34576a1575f83} 
+void Space\+Field.\+key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Event}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Метод для отслеживания нажатий клавиш клавиатуры 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em e} & the event to be processed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_space_field_a69aa940aee50758b44af6b029cc011f6}\index{SpaceField@{SpaceField}!mousePressed@{mousePressed}}
+\index{mousePressed@{mousePressed}!SpaceField@{SpaceField}}
+\doxysubsubsection{\texorpdfstring{mousePressed()}{mousePressed()}}
+{\footnotesize\ttfamily \label{class_space_field_a69aa940aee50758b44af6b029cc011f6} 
+void Space\+Field.\+mouse\+Pressed (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Метод для обработки нажатий мыши Отслеживает, попало ли нажатие по звезде 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em e} & the event to be processed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_space_field_ab0d3c336ab268259cce61eda6c889c36}\index{SpaceField@{SpaceField}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!SpaceField@{SpaceField}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_space_field_ab0d3c336ab268259cce61eda6c889c36} 
+void Space\+Field.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Расширение метода \doxylink{class_space_field_ab0d3c336ab268259cce61eda6c889c36}{paint\+Component()} из java.\+awt Вызывается каждый кадр симуляции и рисует всё 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g} & the {\ttfamily Graphics} object to protect \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/Space\+Field.\+java\end{DoxyCompactItemize}

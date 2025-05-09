@@ -1,0 +1,107 @@
+\doxysection{Класс Star}
+\hypertarget{class_star}{}\label{class_star}\index{Star@{Star}}
+
+
+Класс, представляющий звезду в симуляции.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_star_aafe7728480805d58f882f99edac024f3}{Star}} (double x, double y, double velocityX, double velocityY, double mass, Color color, String name)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания новой звезды с заданными параметрами. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_star_a3ab5a5d3cbfa6ecc56091d47f0b4c0bf}{gravity\+Update}} (\mbox{\hyperlink{class_star}{Star}} an\+Star)
+\begin{DoxyCompactList}\small\item\em Обновляет скорость звезды под действием гравитации от другой звезды. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_star_a36727b6808d0dd18aab9141edac9e7ed}{move}} ()
+\begin{DoxyCompactList}\small\item\em Обновляет положение звезды на основе текущей скорости. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_star_aff223d5ab5831fb0617f8596cebb67b4}{collision\+Update}} (\mbox{\hyperlink{class_star}{Star}} an\+Star)
+\begin{DoxyCompactList}\small\item\em Обрабатывает столкновение с другой звездой. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, представляющий звезду в симуляции. 
+
+Звезда имеет координаты, скорость, массу, радиус, цвет и имя. Звёзды могут взаимодействовать друг с другом через гравитацию и столкновения. \begin{DoxyAuthor}{Автор}
+kirbornu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_star_aafe7728480805d58f882f99edac024f3}\index{Star@{Star}!Star@{Star}}
+\index{Star@{Star}!Star@{Star}}
+\doxysubsubsection{\texorpdfstring{Star()}{Star()}}
+{\footnotesize\ttfamily \label{class_star_aafe7728480805d58f882f99edac024f3} 
+Star.\+Star (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{double}]{velocityX}{, }\item[{double}]{velocityY}{, }\item[{double}]{mass}{, }\item[{Color}]{color}{, }\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания новой звезды с заданными параметрами. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & Координата X начального положения звезды. \\
+\hline
+{\em y} & Координата Y начального положения звезды. \\
+\hline
+{\em velocityX} & Начальная скорость по оси X. \\
+\hline
+{\em velocityY} & Начальная скорость по оси Y. \\
+\hline
+{\em mass} & Масса звезды, определяющая её размер и гравитационное влияние. \\
+\hline
+{\em color} & Цвет звезды для визуализации. \\
+\hline
+{\em name} & Имя звезды для идентификации. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_star_aff223d5ab5831fb0617f8596cebb67b4}\index{Star@{Star}!collisionUpdate@{collisionUpdate}}
+\index{collisionUpdate@{collisionUpdate}!Star@{Star}}
+\doxysubsubsection{\texorpdfstring{collisionUpdate()}{collisionUpdate()}}
+{\footnotesize\ttfamily \label{class_star_aff223d5ab5831fb0617f8596cebb67b4} 
+void Star.\+collision\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}}}]{an\+Star}{}\end{DoxyParamCaption})}
+
+
+
+Обрабатывает столкновение с другой звездой. 
+
+Может привести к распаду звезды на фрагменты или поглощению одной звезды другой. 
+\begin{DoxyParams}{Аргументы}
+{\em an\+Star} & Другая звезда, с которой происходит столкновение. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_star_a3ab5a5d3cbfa6ecc56091d47f0b4c0bf}\index{Star@{Star}!gravityUpdate@{gravityUpdate}}
+\index{gravityUpdate@{gravityUpdate}!Star@{Star}}
+\doxysubsubsection{\texorpdfstring{gravityUpdate()}{gravityUpdate()}}
+{\footnotesize\ttfamily \label{class_star_a3ab5a5d3cbfa6ecc56091d47f0b4c0bf} 
+void Star.\+gravity\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_star}{Star}}}]{an\+Star}{}\end{DoxyParamCaption})}
+
+
+
+Обновляет скорость звезды под действием гравитации от другой звезды. 
+
+Вычисляет силу притяжения или отталкивания в зависимости от расстояния. 
+\begin{DoxyParams}{Аргументы}
+{\em an\+Star} & Другая звезда, с которой происходит гравитационное взаимодействие. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_star_a36727b6808d0dd18aab9141edac9e7ed}\index{Star@{Star}!move@{move}}
+\index{move@{move}!Star@{Star}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_star_a36727b6808d0dd18aab9141edac9e7ed} 
+void Star.\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Обновляет положение звезды на основе текущей скорости. 
+
+Ограничивает максимальную скорость значением 50 по каждой оси. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/Star.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Симуляция небесной механики - cosmos: Класс Star</title>
+<link rel="icon" href="cosmos_icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="cosmos_icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Симуляция небесной механики - cosmos
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_star.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_star-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Star</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, представляющий звезду в симуляции.  
+ <a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aafe7728480805d58f882f99edac024f3" id="r_aafe7728480805d58f882f99edac024f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafe7728480805d58f882f99edac024f3">Star</a> (double x, double y, double velocityX, double velocityY, double mass, Color color, String name)</td></tr>
+<tr class="memdesc:aafe7728480805d58f882f99edac024f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор для создания новой звезды с заданными параметрами.  <br /></td></tr>
+<tr class="separator:aafe7728480805d58f882f99edac024f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab5a5d3cbfa6ecc56091d47f0b4c0bf" id="r_a3ab5a5d3cbfa6ecc56091d47f0b4c0bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ab5a5d3cbfa6ecc56091d47f0b4c0bf">gravityUpdate</a> (<a class="el" href="class_star.html">Star</a> anStar)</td></tr>
+<tr class="memdesc:a3ab5a5d3cbfa6ecc56091d47f0b4c0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет скорость звезды под действием гравитации от другой звезды.  <br /></td></tr>
+<tr class="separator:a3ab5a5d3cbfa6ecc56091d47f0b4c0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36727b6808d0dd18aab9141edac9e7ed" id="r_a36727b6808d0dd18aab9141edac9e7ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36727b6808d0dd18aab9141edac9e7ed">move</a> ()</td></tr>
+<tr class="memdesc:a36727b6808d0dd18aab9141edac9e7ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет положение звезды на основе текущей скорости.  <br /></td></tr>
+<tr class="separator:a36727b6808d0dd18aab9141edac9e7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff223d5ab5831fb0617f8596cebb67b4" id="r_aff223d5ab5831fb0617f8596cebb67b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff223d5ab5831fb0617f8596cebb67b4">collisionUpdate</a> (<a class="el" href="class_star.html">Star</a> anStar)</td></tr>
+<tr class="memdesc:aff223d5ab5831fb0617f8596cebb67b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает столкновение с другой звездой.  <br /></td></tr>
+<tr class="separator:aff223d5ab5831fb0617f8596cebb67b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, представляющий звезду в симуляции. </p>
+<p>Звезда имеет координаты, скорость, массу, радиус, цвет и имя. Звёзды могут взаимодействовать друг с другом через гравитацию и столкновения. </p><dl class="section author"><dt>Автор</dt><dd>kirbornu </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.1 </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aafe7728480805d58f882f99edac024f3" name="aafe7728480805d58f882f99edac024f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe7728480805d58f882f99edac024f3">&#9670;&#160;</a></span>Star()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Star.Star </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>velocityX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>velocityY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>mass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор для создания новой звезды с заданными параметрами. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Координата X начального положения звезды. </td></tr>
+    <tr><td class="paramname">y</td><td>Координата Y начального положения звезды. </td></tr>
+    <tr><td class="paramname">velocityX</td><td>Начальная скорость по оси X. </td></tr>
+    <tr><td class="paramname">velocityY</td><td>Начальная скорость по оси Y. </td></tr>
+    <tr><td class="paramname">mass</td><td>Масса звезды, определяющая её размер и гравитационное влияние. </td></tr>
+    <tr><td class="paramname">color</td><td>Цвет звезды для визуализации. </td></tr>
+    <tr><td class="paramname">name</td><td>Имя звезды для идентификации. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="aff223d5ab5831fb0617f8596cebb67b4" name="aff223d5ab5831fb0617f8596cebb67b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff223d5ab5831fb0617f8596cebb67b4">&#9670;&#160;</a></span>collisionUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Star.collisionUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_star.html">Star</a></td>          <td class="paramname"><span class="paramname"><em>anStar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обрабатывает столкновение с другой звездой. </p>
+<p>Может привести к распаду звезды на фрагменты или поглощению одной звезды другой. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anStar</td><td>Другая звезда, с которой происходит столкновение. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ab5a5d3cbfa6ecc56091d47f0b4c0bf" name="a3ab5a5d3cbfa6ecc56091d47f0b4c0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab5a5d3cbfa6ecc56091d47f0b4c0bf">&#9670;&#160;</a></span>gravityUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Star.gravityUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_star.html">Star</a></td>          <td class="paramname"><span class="paramname"><em>anStar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновляет скорость звезды под действием гравитации от другой звезды. </p>
+<p>Вычисляет силу притяжения или отталкивания в зависимости от расстояния. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anStar</td><td>Другая звезда, с которой происходит гравитационное взаимодействие. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36727b6808d0dd18aab9141edac9e7ed" name="a36727b6808d0dd18aab9141edac9e7ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36727b6808d0dd18aab9141edac9e7ed">&#9670;&#160;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Star.move </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновляет положение звезды на основе текущей скорости. </p>
+<p>Ограничивает максимальную скорость значением 50 по каждой оси. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/<b>Star.java</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_star.html">Star</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

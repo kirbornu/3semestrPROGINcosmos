@@ -1,8 +1,19 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Класс отвечает за отрисовку поля интерфейса, через который происходит взаимодействие пользоователя с симуляцией
+ * @author kirbornu
+ * @version 1.1
+ */
 public class ButtonsField extends JPanel {
+    /**
+     * Ширина поля интерфейса
+     */
     static public final int SCREEN_WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width;
+    /**
+     * Высота поля интерфейса
+     */
     static public final int SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
     GameCore gameCore;
     Checkbox multipleModeCheckbox;
@@ -17,6 +28,10 @@ public class ButtonsField extends JPanel {
         addButtons();
     }
 
+    /**
+     * Этот метод - основная часть класса интерфейса.
+     * Здесь происходит добавление всех кнопок на поле интерфейса
+     */
     public void addButtons() {
         Button exitButton = new Button("Выход/Esc");
         exitButton.addActionListener(e -> System.exit(0));

@@ -6,8 +6,19 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 import java.util.Set;
 
+/**
+ * Этот класс отвечает за отрисовку объектов симуляции
+ * @author kirbornu
+ * @version 1.1
+ */
 public class SpaceField extends JPanel implements ActionListener, MouseListener, KeyListener {
+    /**
+     * Ширина окна отрисовки
+     */
     static public final double FIELD_WIDTH = (double) (Toolkit.getDefaultToolkit().getScreenSize().width * 3) / 4;
+    /**
+     * Высота окна отрисовки
+     */
     static public final double FIELD_HEIGHT = (double) Toolkit.getDefaultToolkit().getScreenSize().height;
     GameCore gameCore;
     ButtonsField buttonsField;
@@ -20,6 +31,11 @@ public class SpaceField extends JPanel implements ActionListener, MouseListener,
         addKeyListener(this);
     }
 
+    /**
+     * Расширение метода paintComponent() из java.awt
+     * Вызывается каждый кадр симуляции и рисует всё
+     * @param g the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -28,6 +44,14 @@ public class SpaceField extends JPanel implements ActionListener, MouseListener,
         drawStars(g2, gameCore.scale, gameCore.shiftX, gameCore.shiftY);
     }
 
+    /**
+     * Отрисовка координатной сетки для ориентирования в пространстве
+     * Смещение камеры учитывается в отрисовке
+     * @param g2 Класс-отрисовщик из библиотеки
+     * @param scale Масштаб отображения (зум камеры)
+     * @param shiftX Смещение камеры по оси X
+     * @param shiftY Смещение камеры по оси Y
+     */
     public void drawCoordinateGrid(Graphics2D g2, double scale, double shiftX, double shiftY){
         g2.setColor(Color.DARK_GRAY);
         g2.draw(new Line2D.Double((FIELD_WIDTH / 2 + shiftX) * scale, 0,
@@ -36,6 +60,14 @@ public class SpaceField extends JPanel implements ActionListener, MouseListener,
                                     FIELD_WIDTH, (FIELD_HEIGHT / 2 + shiftY) * scale));
     }
 
+    /**
+     * Отрисовка каждый звезды
+     * Цикл проходится по массиву gameCore.stars
+     * @param g2 Класс-отрисовщик из библиотеки
+     * @param scale Масштаб отображения (зум кам
+     * @param shiftX Смещение камеры по оси X
+     * @param shiftY Смещение камеры по оси Y
+     */
     public void drawStars(Graphics2D g2, double scale, double shiftX, double shiftY){
         for (Star star : gameCore.stars) {
             g2.setColor(star.color);
@@ -71,6 +103,12 @@ public class SpaceField extends JPanel implements ActionListener, MouseListener,
     public void setGameCore(GameCore gameCore) {this.gameCore = gameCore;}
     public void setButtonsField(ButtonsField buttonsField) {this.buttonsField = buttonsField;}
 
+    /**
+     * Это обработчик событий физики
+     * Занимается отслеживанием взаимодействия каждой пары звезд
+     * Этим взаимодействием может быть либо притяжение на расстоянии, либо столкновение
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if ((! gameCore.isGameStop) && gameCore.stars.size() > 1){
@@ -102,6 +140,11 @@ public class SpaceField extends JPanel implements ActionListener, MouseListener,
 
     }
 
+    /**
+     * Метод для обработки нажатий мыши
+     * Отслеживает, попало ли нажатие по звезде
+     * @param e the event to be processed
+     */
     @Override
     public void mousePressed(MouseEvent e) {
         if (gameCore.waitingForInput) {
@@ -139,6 +182,10 @@ public class SpaceField extends JPanel implements ActionListener, MouseListener,
 
     }
 
+    /**
+     * Метод для отслеживания нажатий клавиш клавиатуры
+     * @param e the event to be processed
+     */
     @Override
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
